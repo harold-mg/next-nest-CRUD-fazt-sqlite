@@ -20,7 +20,7 @@ export function ProductForm({product}: any){
     });
     const router = useRouter();
     const params = useParams<{id: string}>();
-    console.log(params);
+    console.log('el parametro enviado es',params);
 
     const onSubmit = handleSubmit( async (data) => {
         if (params?.id) {

@@ -31,6 +31,7 @@ export class ProductsService {
   }
 
   async findOne(id: number) {
+    console.log("ID recibido:", id);
     const productFound = await this.prismaService.product.findUnique({ 
       where: { 
         id: id, 

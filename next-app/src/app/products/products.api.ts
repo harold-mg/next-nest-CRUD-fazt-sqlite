@@ -1,5 +1,6 @@
 //export const BACKEND_URL = process.env.BACKEND_URL
-
+//ó
+//export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
 export async function getProducts() {
     const data = await fetch('http://localhost:4000/api/products', { //const data = await fetch(`${BACKEND_URL}/api/products`, {
         cache: "no-store",
@@ -8,6 +9,7 @@ export async function getProducts() {
 }
 
 export async function getProduct (id: string){
+    console.log("ID enviado al backend:", id);
     const data = await fetch(`http://localhost:4000/api/products/${id}`,{ //const data = await fetch(`${BACKEND_URL}/api/products/${id}`, {
         cache: "no-store",
     });

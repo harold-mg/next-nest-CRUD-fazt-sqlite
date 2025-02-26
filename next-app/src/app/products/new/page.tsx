@@ -8,7 +8,9 @@ interface Props {
     }
 }
 async function ProductNewPage({params}: Props) {
-    const product = await getProduct(params.id);
+    console.log("Params recibidos nuevo:", params);
+    //const product = await getProduct(params.id);
+    const product = params.id ? await getProduct(params.id) : null;
     //console.log(product);
   return (
     <div className='h-screen flex justify-center items-center'>
